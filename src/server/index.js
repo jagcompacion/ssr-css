@@ -6,16 +6,6 @@ import configureStore from '../redux/configureStore'
 import App from '../components/app'
 
 
-// Always use this condition to prevent stlye from loading
-// while performing SSR
-// More information on this -> https://github.com/webpack-contrib/style-loader/issues/109
-
-
-if (!SSR) {
-  require('../../assets/style.css')
-}
-
-
 export default function render(initialState) {
   // Configure the store with the initial state provided
   const store = configureStore(initialState)

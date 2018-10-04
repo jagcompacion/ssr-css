@@ -4,6 +4,16 @@ import { fetchAppsIfNeeded } from '../redux/actions'
 
 import Card from './card'
 
+// Always use this condition to prevent stlye from loading
+// while performing SSR
+// More information on this -> https://github.com/webpack-contrib/style-loader/issues/109
+
+//SSR? import '../../assets/stlye.css'
+
+if (!SSR) {
+  require('../../assets/style.css')
+}
+
 
 class App extends Component {
 
