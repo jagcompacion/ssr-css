@@ -21,8 +21,7 @@ config = {
 
  plugins: [
    new webpack.DefinePlugin({
-    // Definitions...
-    SSR: true
+    SSR: JSON.stringify(true)
    })
  ]
 

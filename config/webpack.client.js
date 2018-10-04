@@ -1,4 +1,5 @@
-const path = require('path');
+const path    = require('path'),
+      webpack = require('webpack');
 
 config = {
   entry: {
@@ -20,7 +21,13 @@ config = {
             ]
       }
     ]
- }
+ },
+
+ plugins: [
+   new webpack.DefinePlugin({
+    SSR: JSON.stringify(false)
+   })
+ ]
 
 }
 
